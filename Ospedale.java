@@ -11,11 +11,6 @@ class Ospedale{
         Vector<String> cVerde = new Vector<>(1,1);
         Vector<Menu> M = new Vector<Menu>();
 
-        M.add(new Menu("1","Inserisci persona"));
-        M.add(new Menu("2","Togli persona"));
-        M.add(new Menu("3","Vedi persone"));
-        M.add(new Menu("4","Cerca persona"));
-        M.add(new Menu("0","Esci"));
 
         System.out.println("Scegli: ");
         String scelta = scanner.nextLine();
