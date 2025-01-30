@@ -23,15 +23,15 @@ public class Menu {
             scanner.nextLine(); // Consuma il ritorno a capo
 
             switch (scelta) {
-                case 1 -> aggiungiPaziente();
-                case 2 -> rimuoviPaziente();
-                case 3 -> ospedale.mostraPazienti();
-                case 4 -> trovaPaziente();
-                case 5 -> {
+                case 1: aggiungiPaziente();break;
+                case 2: rimuoviPaziente();break;
+                case 3: ospedale.mostraPazienti();break;
+                case 4 : trovaPaziente();break;
+                case 5: {
                     System.out.println("Uscita...");
-                    return;
+                    break;
                 }
-                default -> System.out.println("Scelta non valida.");
+                default : System.out.println("Scelta non valida.");break;
             }
         }
     }
@@ -44,10 +44,16 @@ public class Menu {
         System.out.print("Età: ");
         int eta = scanner.nextInt();
         scanner.nextLine();
-        System.out.print("Gravità (verde/giallo/rosso): ");
-        String gravita = scanner.nextLine();
+        
+        String gravita;
+        do {
+            System.out.print("Gravità (verde/giallo/rosso): ");
+            gravita = scanner.nextLine().toLowerCase();
+        } while (!gravita.equals("verde") && !gravita.equals("giallo") && !gravita.equals("rosso"));
+
         System.out.print("È già stato visitato? (true/false): ");
         boolean visitato = scanner.nextBoolean();
+        scanner.nextLine(); // Consuma il ritorno a capo
 
         ospedale.aggiungiPaziente(new Persona(nome, cognome, eta, gravita, visitato));
         System.out.println("Paziente aggiunto con successo.");

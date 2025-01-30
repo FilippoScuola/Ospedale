@@ -13,7 +13,9 @@ class Menu {
         return inserimento + " " + descrizione;
     }
 
-    
+    public void stampa(){
+        
+    }
 
     public static void main(String[] args){
 
@@ -24,6 +26,7 @@ class Menu {
         M.add(new Menu("3","Vedi persone"));
         M.add(new Menu("4","Esci"));
 
+        
         
         
     }

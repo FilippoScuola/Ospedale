@@ -7,10 +7,10 @@ public class Ospedale {
 
     public void aggiungiPaziente(Persona p) {
         switch (p.getCodiceGravita()) {
-            case "verde" -> pazientiVerdi.add(p);
-            case "giallo" -> pazientiGialli.add(p);
-            case "rosso" -> pazientiRossi.add(p);
-            default -> System.out.println("Codice gravità non valido.");
+            case "verde": pazientiVerdi.add(p);break;
+            case "giallo": pazientiGialli.add(p);break;
+            case "rosso": pazientiRossi.add(p);break;
+            default: System.out.println("Codice gravità non valido.");break;
         }
     }
 
